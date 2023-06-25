@@ -20,7 +20,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use('/', express.static(path.join(__dirname, 'server/uploads')))
 
-
 const routes = require('./Server/Routes/usuario.routes');
  require('./Server/Routes/publicaciones.routes')(app)
  require('./Server/Routes/comentarios.routes')(app)
