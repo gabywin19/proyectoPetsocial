@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.2b26ab2d.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/PetSocialRosa.png": "/static/media/PetSocialRosa.31a62c0110902d383bb8.png",
+    "static/media/PetSocial.png": "/static/media/PetSocial.38381bed518b22d9682e.png",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.2b26ab2d.js.map": "/static/js/main.2b26ab2d.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.2b26ab2d.js"
+  ]
+}
