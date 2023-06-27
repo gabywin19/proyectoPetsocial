@@ -2,12 +2,13 @@ const { index, create, remove, update, get,} = require("../Controllers/publicaci
 const { authenticate } = require("../Config/jwt.config");
 const multer = require("multer");
 const path = require("path");
+const { v4: uuidv4 } = require("uuid");
 
 const storage = multer.diskStorage({
   destination: path.join(__dirname, "../uploads/"), // Ruta absoluta al directorio "uploads"
   filename: (req, file, cb) => {
     const extension = path.extname(file.originalname);
-    const nombreArchivo = `${getNextImageNumber()}${extension}`;
+    const nombreArchivo = `${uuidv4()}${extension}`;
     cb(null, nombreArchivo);
   },
 });

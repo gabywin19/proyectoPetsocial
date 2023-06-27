@@ -5,6 +5,8 @@ import Grid from "@mui/material/Unstable_Grid2";
 const InputsComponents = ({ formik, loading }) => {
   return (
     <>
+      <Grid>
+      <label htmlFor="imagen">Seleccione Foto de Perfil: </label>
       <input 
         type="file" 
         name="imagen" 
@@ -13,6 +15,8 @@ const InputsComponents = ({ formik, loading }) => {
           formik.setFieldValue("imagen", e.currentTarget.files[0]);
         }}
       />
+      </Grid> 
+     
       <Grid xs={12}>
         <TextField
           fullWidth

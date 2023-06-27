@@ -9,7 +9,7 @@ const Form = ({ fetch }) => {
   const [pensamientos, setPensamientos] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (valores) => {
+  const handleSubmit = async (valores,formikBag) => {
     setPensamientos(false);
     setLoading(true);
 
@@ -25,6 +25,7 @@ const Form = ({ fetch }) => {
       setPensamientos(200);
 
       fetch();
+      formikBag.resetForm()
     } catch (e) {
       console.log("Error", e);
       if (e?.response?.status === 500) {
@@ -95,13 +96,13 @@ const Form = ({ fetch }) => {
 
             {pensamientos === 200 && (
               <Grid xs={12} textAlign="center">
-                <Box color="success.main">Pensamiento Creado</Box>
+                <Box color="success.main">Publicación Creada</Box>
               </Grid>
             )}
 
             {pensamientos === 500 && (
               <Grid xs={12} textAlign="center">
-                <Box color="error.main">Error al Crear el Pensamiento </Box>
+                <Box color="error.main">Error al Crear la Publicación</Box>
               </Grid>
             )}
           </Grid>

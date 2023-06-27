@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {Typography,Box,CircularProgress,Avatar,Menu,MenuItem,IconButton,Card,CardHeader,CardContent,CardActions,CardMedia,Collapse} from "@mui/material";
+import {Typography,Box,Avatar,Menu,MenuItem,IconButton,Card,CardHeader,CardContent,CardActions,CardMedia,Collapse} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import { useNavigate, NavLink } from "react-router-dom";
 import CommentIcon from "@mui/icons-material/Comment";
@@ -67,7 +67,6 @@ export const Post = ({ datos, refresh }) => {
       {post && (
         <CardMedia
           component={datos.imagen.mimetype === 'video/mp4' ? 'video' : "img"}
-          autoPlay
           controls
           height={500}
           sx={{objectFit: 'fill'}}
@@ -128,7 +127,7 @@ const Renderizar = ({ view, fetch }) => {
     <>
       {view?.length <= 0 && (
         <Box sx={{ mt: 4 }} textAlign="center">
-          <CircularProgress />
+           <Typography>No hay Publicación Para Mostrar</Typography>
         </Box>
       )}
 
