@@ -68,8 +68,8 @@ export const Post = ({ datos, refresh }) => {
         <CardMedia
           component={datos.imagen.mimetype === 'video/mp4' ? 'video' : "img"}
           controls
-          height={500}
-          sx={{objectFit: 'fill'}}
+          height="auto"
+          sx={{objectFit:'contain',width:"100%",maxHeight:"90vh"}}
           image={`http://localhost:7070/${post}`}
           alt={datos.imagen.originalname}
         />
